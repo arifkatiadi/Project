@@ -22,6 +22,7 @@
     text-decoration: none;
     transform: scale(1);
     border-radius: 5px;
+    position: relative;
 }
 .header_menu ul li:hover>a{
     background-color: #2980b9;
@@ -60,4 +61,33 @@
 }
 .header_menu ul li ul li:first-child a{
     padding: 50x;
+}
+/* Before After animation */
+.header_menu ul li a::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: rgba(255, 0, 0, 0.50);
+    border-radius: 10px;
+    transition: .6s;
+    z-index: -1;
+}
+.header_menu ul li a:hover::before{
+    width: 100%;
+}
+.list_icon li::before{
+    content: "\f0da";
+    margin-right: 15px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid red;
+    padding: 0 10px;
+    background-color: black;
+    border-radius: 50%;
+
 }
