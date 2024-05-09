@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
 .header_menu ul{
     list-style: none;
     text-align: center;
@@ -89,5 +94,81 @@
     padding: 0 10px;
     background-color: black;
     border-radius: 50%;
-
+}
+/* Transform Animation */
+.transform_animation {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+    float: right;
+}
+.basic_css {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: bisque;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: .6s;
+}
+.list_icon{
+    max-width: 15%;
+    display: inline-block;
+    margin: 0 0 30px 30px;
+}
+.transform_animation{
+    max-width: 70%;
+}
+.basic_css p {
+    position: relative;
+    top: 45%;
+}
+.div1:hover{
+    transform: translate(30px, -60px);
+}
+.div2:hover{
+    transform: rotate(45deg);
+}
+.div3:hover {
+    transform: skew(45deg, -45deg);
+}
+.div4:hover{
+    transform: scale(2, 1.5);
+}
+.imagediv{
+    width: 250px;
+    margin:50px auto;
+    padding: 40px;
+}
+.img{
+    max-width: 100%;
+    border-radius: 50%;
+    transition: 1s;
+}
+.img:hover{
+    transform: scale(1.5) rotate(2880deg);
+    cursor: pointer;
+}
+.roomleft{
+    width: 30%;
+    height: 150px;
+    background-color: #2980b9;
+    float: left;
+    text-align: center;
+}
+.roomright{
+    width: 40%;
+    height: 250px;
+    background-color: #ff5d35;
+    text-align: center;
+    float: right;
+}
+.room2{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(77, 15, 247);
+    border: 1px solid black;
+    text-align: center;
 }
